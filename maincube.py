@@ -7,13 +7,20 @@ class maincube(pygame.sprite.Sprite):
         #Calls the Sprite class constructor.
         #It must be the first line in constructor.
         super().__init__()
-        self.x = 20
-        self.y = 20
+        self.image = MAINCUBE
+        self.rect = pygame.Rect(50,250,25,25)
+        self.rect.x = 50
+        self.rect.y = 250
 
-
-        def up(self):
-            self.rect.y = self.rect.y-25
-            self.rect.x = self.x_coord
-        def down(self):
-            self.rect.y = self.rect.y+25
-            self.rect.x = slef.x_coord
+    def up(self):
+        self.rect.y = self.rect.y-10
+        self.rect.x = self.rect.x
+    def down(self):
+        self.rect.y = self.rect.y+10
+        self.rect.x = self.rect.x
+    def right(self):
+        self.rect.y = self.rect.y
+        self.rect.x = self.rect.x-10
+    def left(self):
+        self.rect.y = self.rect.y
+        self.rect.x = self.rect.x+10
